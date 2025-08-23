@@ -1,375 +1,251 @@
- <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launching into Cyber Security - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #333;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-        }
-        
-        /* Sidebar Styles */
-        #sidebar {
-            width: 280px;
-            background: rgba(15, 32, 39, 0.95);
-            color: white;
-            padding: 2rem 1rem;
-            height: 100vh;
-            position: fixed;
-            overflow-y: auto;
-            box-shadow: 3px 0 15px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-        
-        #sidebar .inner {
-            padding: 0;
-        }
-        
-        #sidebar nav ul {
-            list-style: none;
-        }
-        
-        #sidebar nav li {
-            margin-bottom: 0.5rem;
-        }
-        
-        #sidebar nav a {
-            color: #ddd;
-            text-decoration: none;
-            display: block;
-            padding: 0.8rem 1rem;
-            border-radius: 6px;
-            transition: all 0.3s ease;
-        }
-        
-        #sidebar nav a:hover,
-        #sidebar nav a.active {
-            background: linear-gradient(135deg, #2c5364 0%, #203a43 100%);
-            color: white;
-        }
-        
-        /* Main Content */
-        #wrapper {
-            flex: 1;
-            margin-left: 280px;
-            padding: 2rem;
-        }
-        
-        /* Header with same style as footer */
-        #intro {
-            background: #1c1d26;
-            color: white;
-            text-align: center;
-            padding: 3rem 2rem;
-            margin: 0;
-            border-radius: 8px;
-        }
-        
-        #intro h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        #intro p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Units section with reduced gap */
-        #units {
-            padding-top: 2rem;
-        }
-        
-        #units .inner {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        #units h2 {
-            text-align: center;
-            color: white;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-        }
-        
-        /* Modern Flash Cards */
-        .unit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .unit-card {
-            background: #fff;
-            padding: 1.8rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border-left: 4px solid #203a43;
-        }
-        
-        .unit-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.3s ease;
-        }
-        
-        .unit-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-        }
-        
-        .unit-card:hover:before {
-            transform: scaleX(1);
-        }
-        
-        .unit-number {
-            position: absolute;
-            top: -10px;
-            right: -10px;
-            width: 50px;
-            height: 50px;
-            background: #2c5364;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2rem;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .unit-card h3 {
-            margin: 0 0 1rem;
-            font-size: 1.3rem;
-            color: #203a43;
-            padding-right: 40px;
-        }
-        
-        .unit-card p {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 1.5rem;
-        }
-        
-        .unit-card .button {
-            display: inline-block;
-            padding: 0.6rem 1.5rem;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(44, 83, 100, 0.3);
-        }
-        
-        .unit-card .button:hover {
-            background: linear-gradient(135deg, #203a43, #2c5364);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(44, 83, 100, 0.4);
-        }
-        
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            #sidebar {
-                width: 220px;
-            }
-            
-            #wrapper {
-                margin-left: 220px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-            }
-            
-            #sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-                padding: 1rem;
-            }
-            
-            #wrapper {
-                margin-left: 0;
-                padding: 1.5rem;
-            }
-            
-            .unit-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <title>Launching into Cyber Security - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    /* Hero section - Keeping original */
+    #intro {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    #intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    #intro p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Modern Flash Cards */
+    .unit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .unit-card {
+      background: #fff;
+      padding: 1.8rem;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border-left: 4px solid #203a43;
+    }
+    
+    .unit-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    
+    .unit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    }
+    
+    .unit-card:hover:before {
+      transform: scaleX(1);
+    }
+    
+    .unit-number {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      width: 50px;
+      height: 50px;
+      background: #2c5364;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .unit-card h3 {
+      margin: 0 0 1rem;
+      font-size: 1.3rem;
+      color: #203a43;
+      padding-right: 40px;
+    }
+    
+    .unit-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+    
+    .unit-card .button {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 3px 10px rgba(44, 83, 100, 0.3);
+    }
+    
+    .unit-card .button:hover {
+      background: linear-gradient(135deg, #203a43, #2c5364);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(44, 83, 100, 0.4);
+    }
+  </style>
 </head>
-<body>
-    <!-- Sidebar -->
-    <section id="sidebar">
-        <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="launching-into-cyber-security.html" class="active">Launching into Cyber Security</a></li>
-                    <li><a href="network-security.html">Network Security</a></li>
-                    <li><a href="security-risk-management.html">Security & Risk Management</a></li>
-                    <li><a href="secure-software-development.html">Secure Software Development</a></li>
-                    <li><a href="human-factor.html">The Human Factor</a></li>
-                    <li><a href="secure-system-architecture.html">Secure System Architecture</a></li>
-                    <li><a href="principles-digital-forensics-cyber-law.html">Principles of Digital Forensic and Cyber Law</a></li>
-                    <li><a href="research-methods.html">Research Methods & Professional Practice</a></li>
-                    <li><a href="msc-project.html">MSc Cyber Security Project</a></li>
-                </ul>
-            </nav>
-        </div>
+<body class="is-preload">
+
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <div class="inner">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="launching-into-cyber-security.html">Launching into Cyber Security</a></li>
+          <li><a href="network-security.html">Network Security</a></li>
+          <li><a href="security-risk-management.html">Security & Risk Management</a></li>
+          <li><a href="secure-software-development.html">Secure Software Development</a></li>
+          <li><a href="human-factor.html">The Human Factor</a></li>
+          <li><a href="secure-system-architecture.html">Secure System Architecture</a></li>
+          <li><a href="principles-digital-forensics-cyber-law.html">Principles of Digital Forensic and Cyber Law</a></li>
+          <li><a href="research-methods.html">Research Methods & Professional Practice</a></li>
+          <li><a href="msc-project.html">MSc Cyber Security Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Intro -->
+    <section id="intro" class="wrapper">
+      <div class="inner">
+        <h1>Launching into Cyber Security</h1>
+        <p>Foundation of Cyber Security in 12 Units</p>
+      </div>
     </section>
 
-    <!-- Main Content -->
-    <div id="wrapper">
-        <!-- Hero Section -->
-        <section id="intro" class="wrapper">
-            <div class="inner">
-                <h1>Launching into Cyber Security</h1>
-                <p>Foundation of Cyber Security in 12 Units</p>
-            </div>
-        </section>
+    <!-- Units -->
+    <section id="units" class="wrapper style2 fade-up">
+      <div class="inner">
+        <h2>Units Overview</h2>
+        <div class="unit-grid">
+          <div class="unit-card">
+            <div class="unit-number">1</div>
+            <h3>Unit 1: Introduction to Cyber Security</h3>
+            <p>Overview of the cyber security landscape.</p>
+            <a href="unit1.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">2</div>
+            <h3>Unit 2: Cyber Security Issues for Businesses</h3>
+            <p>Common threats and vulnerabilities.</p>
+            <a href="unit2.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">3</div>
+            <h3>Unit 3: Approaches to Cyber Security Design</h3>
+            <p>Designing secure systems and strategies.</p>
+            <a href="unit3.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">4</div>
+            <h3>Unit 4: Threat Identification & Modelling</h3>
+            <p>Methods to analyze and assess risks.</p>
+            <a href="unit4.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">5</div>
+            <h3>Unit 5: Algorithms & Programming Basics</h3>
+            <p>Foundations of secure coding practices.</p>
+            <a href="unit5.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">6</div>
+            <h3>Unit 6: UML for Secure Software Design</h3>
+            <p>Applying UML in security contexts.</p>
+            <a href="unit6.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">7</div>
+            <h3>Unit 7: Database Design & Implementation</h3>
+            <p>Building secure and robust databases.</p>
+            <a href="unit7.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">8</div>
+            <h3>Unit 8: Python Programming & MySQL</h3>
+            <p>Practical programming for security.</p>
+            <a href="unit8.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">9</div>
+            <h3>Unit 9: OOP Application</h3>
+            <p>Object-oriented design in security.</p>
+            <a href="unit9.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">10</div>
+            <h3>Unit 10: Advanced OO Techniques I</h3>
+            <p>Secure system practices with OO.</p>
+            <a href="unit10.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">11</div>
+            <h3>Unit 11: Advanced OO Techniques II</h3>
+            <p>Further approaches in OO for security.</p>
+            <a href="unit11.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <div class="unit-number">12</div>
+            <h3>Unit 12: Future of Cyber Security</h3>
+            <p>Trends shaping cyber security tomorrow.</p>
+            <a href="unit12.html" class="button">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-        <!-- Units Section -->
-        <section id="units" class="wrapper style2 fade-up">
-            <div class="inner">
-                <h2>Units Overview</h2>
-                <div class="unit-grid">
-                    <div class="unit-card">
-                        <div class="unit-number">1</div>
-                        <h3>Unit 1: Introduction to Cyber Security</h3>
-                        <p>Overview of the cyber security landscape, key concepts, and importance in the digital age.</p>
-                        <a href="unit1.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">2</div>
-                        <h3>Unit 2: Cyber Security Issues for Businesses</h3>
-                        <p>Common threats, vulnerabilities, and impacts on modern organizations.</p>
-                        <a href="unit2.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">3</div>
-                        <h3>Unit 3: Approaches to Cyber Security Design</h3>
-                        <p>Designing secure systems and strategies for robust protection.</p>
-                        <a href="unit3.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">4</div>
-                        <h3>Unit 4: Threat Identification & Modelling</h3>
-                        <p>Methods to analyze, assess, and model security risks effectively.</p>
-                        <a href="unit4.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">5</div>
-                        <h3>Unit 5: Algorithms & Programming Basics</h3>
-                        <p>Foundations of secure coding practices and algorithm design.</p>
-                        <a href="unit5.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">6</div>
-                        <h3>Unit 6: UML for Secure Software Design</h3>
-                        <p>Applying UML modeling in security contexts and system design.</p>
-                        <a href="unit6.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">7</div>
-                        <h3>Unit 7: Database Design & Implementation</h3>
-                        <p>Building secure, robust databases with proper access controls.</p>
-                        <a href="unit7.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">8</div>
-                        <h3>Unit 8: Python Programming & MySQL</h3>
-                        <p>Practical programming for security applications and data management.</p>
-                        <a href="unit8.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">9</div>
-                        <h3>Unit 9: OOP Application</h3>
-                        <p>Object-oriented design principles applied to security solutions.</p>
-                        <a href="unit9.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">10</div>
-                        <h3>Unit 10: Advanced OO Techniques I</h3>
-                        <p>Secure system practices with advanced object-oriented approaches.</p>
-                        <a href="unit10.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">11</div>
-                        <h3>Unit 11: Advanced OO Techniques II</h3>
-                        <p>Further approaches in object-oriented design for security.</p>
-                        <a href="unit11.html" class="button">Explore Unit</a>
-                    </div>
-                    <div class="unit-card">
-                        <div class="unit-number">12</div>
-                        <h3>Unit 12: Future of Cyber Security</h3>
-                        <p>Emerging trends and technologies shaping cyber security tomorrow.</p>
-                        <a href="unit12.html" class="button">Explore Unit</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <footer>
-            <p>&copy; Your Name. All rights reserved.</p>
-            <p>Design: Modern Cyber Security Portfolio</p>
-        </footer>
+  <!-- Footer -->
+  <footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+      <ul class="menu">
+        <li>&copy; Your Name. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
     </div>
+  </footer>
 
-    <script>
-        // Simple JavaScript to handle active state for navigation
-        document.addEventListener('DOMContentLoaded', function() {
-            const currentPage = window.location.pathname.split('/').pop();
-            const navLinks = document.querySelectorAll('#sidebar nav a');
-            
-            navLinks.forEach(link => {
-                const linkPage = link.getAttribute('href');
-                if (linkPage === currentPage) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
 </body>
 </html>
