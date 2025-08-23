@@ -1,124 +1,190 @@
  <!DOCTYPE HTML>
-<!--
-    Hyperspace by HTML5 UP
-    Cleaned & Redesigned for neat card layout
--->
 <html>
 <head>
-    <title>Launching into Cyber Security - Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        /* Custom card layout */
-        .unit-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        .unit-card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .unit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 14px rgba(0,0,0,0.15);
-        }
-        .unit-card h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        .unit-card .button {
-            font-size: 0.9rem;
-        }
-        /* Reduce gap below heading */
-        #intro .inner {
-            padding-bottom: 0;
-        }
-    </style>
+  <title>Launching into Cyber Security - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    /* Hero section */
+    #intro {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    #intro h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    #intro p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Units grid */
+    .unit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .unit-card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .unit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+    .unit-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      color: #203a43;
+    }
+    .unit-card p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    .unit-card .button {
+      font-size: 0.9rem;
+      background: #203a43;
+      color: #fff;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+    }
+    .unit-card .button:hover {
+      background: #2c5364;
+    }
+  </style>
 </head>
 <body class="is-preload">
 
-    <!-- Sidebar -->
-    <section id="sidebar">
-        <div class="inner">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="launching-into-cyber-security.html">Launching into Cyber Security</a></li>
-                    <li><a href="network-security.html">Network Security</a></li>
-                    <li><a href="security-risk-management.html">Security & Risk Management</a></li>
-                    <li><a href="secure-software-development.html">Secure Software Development</a></li>
-                    <li><a href="human-factor.html">The Human Factor</a></li>
-                    <li><a href="secure-system-architecture.html">Secure System Architecture</a></li>
-                    <li><a href="principles-digital-forensics-cyber-law.html">Principles of Digital Forensics and Cyber Law</a></li>
-                    <li><a href="research-methods.html">Research Methods & Professional Practice</a></li>
-                    <li><a href="msc-project.html">MSc Cyber Security Project</a></li>
-                </ul>
-            </nav>
-        </div>
+  <!-- Sidebar -->
+  <section id="sidebar">
+    <div class="inner">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="launching-into-cyber-security.html">Launching into Cyber Security</a></li>
+          <li><a href="network-security.html">Network Security</a></li>
+          <li><a href="security-risk-management.html">Security & Risk Management</a></li>
+          <li><a href="secure-software-development.html">Secure Software Development</a></li>
+          <li><a href="human-factor.html">The Human Factor</a></li>
+          <li><a href="secure-system-architecture.html">Secure System Architecture</a></li>
+          <li><a href="principles-digital-forensics-cyber-law.html">Principles of Digital Forensic and Cyber Law</a></li>
+          <li><a href="research-methods.html">Research Methods & Professional Practice</a></li>
+          <li><a href="msc-project.html">MSc Cyber Security Project</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Intro -->
+    <section id="intro" class="wrapper">
+      <div class="inner">
+        <h1>Launching into Cyber Security</h1>
+        <p>Foundation of Cyber Security in 12 Units</p>
+      </div>
     </section>
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-
-        <!-- Intro -->
-        <section id="intro" class="wrapper style1 fullscreen fade-up">
-            <div class="inner">
-                <h1>Launching into Cyber Security</h1>
-                <p>Explore the 12 foundation units of this module. Click "Learn More" on each card to dive deeper.</p>
-            </div>
-        </section>
-
-        <!-- Units Section -->
-        <section id="units" class="wrapper style2 fade-up">
-            <div class="inner">
-                <header class="major">
-                    <h2>Units Overview</h2>
-                </header>
-                <div class="unit-grid">
-                    <div class="unit-card"><h3>Unit 1: Introduction to Cyber Security</h3><a href="unit1.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 2: Cyber Security Issues</h3><a href="unit2.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 3: Approaches to Cyber Security Design</h3><a href="unit3.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 4: Threat Identification</h3><a href="unit4.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 5: Algorithms & Programming Concepts</h3><a href="unit5.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 6: UML in Secure Software Design</h3><a href="unit6.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 7: Database Design</h3><a href="unit7.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 8: Python & MySQL</h3><a href="unit8.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 9: OOP Application</h3><a href="unit9.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 10: Advanced OO Techniques I</h3><a href="unit10.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 11: Advanced OO Techniques II</h3><a href="unit11.html" class="button">Learn More</a></div>
-                    <div class="unit-card"><h3>Unit 12: Future of Cyber Security</h3><a href="unit12.html" class="button">Learn More</a></div>
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer" class="wrapper style1-alt">
-        <div class="inner">
-            <ul class="menu">
-                <li>&copy; Omar Bwanakheir Omar. All rights reserved.</li>
-                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-            </ul>
+    <!-- Units -->
+    <section id="units" class="wrapper style2 fade-up">
+      <div class="inner">
+        <h2>Units Overview</h2>
+        <div class="unit-grid">
+          <div class="unit-card">
+            <h3>Unit 1: Introduction to Cyber Security</h3>
+            <p>Overview of the cyber security landscape.</p>
+            <a href="unit1.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 2: Cyber Security Issues for Businesses</h3>
+            <p>Common threats and vulnerabilities.</p>
+            <a href="unit2.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 3: Approaches to Cyber Security Design</h3>
+            <p>Designing secure systems and strategies.</p>
+            <a href="unit3.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 4: Threat Identification & Modelling</h3>
+            <p>Methods to analyze and assess risks.</p>
+            <a href="unit4.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 5: Algorithms & Programming Basics</h3>
+            <p>Foundations of secure coding practices.</p>
+            <a href="unit5.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 6: UML for Secure Software Design</h3>
+            <p>Applying UML in security contexts.</p>
+            <a href="unit6.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 7: Database Design & Implementation</h3>
+            <p>Building secure and robust databases.</p>
+            <a href="unit7.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 8: Python Programming & MySQL</h3>
+            <p>Practical programming for security.</p>
+            <a href="unit8.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 9: OOP Application</h3>
+            <p>Object-oriented design in security.</p>
+            <a href="unit9.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 10: Advanced OO Techniques I</h3>
+            <p>Secure system practices with OO.</p>
+            <a href="unit10.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 11: Advanced OO Techniques II</h3>
+            <p>Further approaches in OO for security.</p>
+            <a href="unit11.html" class="button">Learn More</a>
+          </div>
+          <div class="unit-card">
+            <h3>Unit 12: Future of Cyber Security</h3>
+            <p>Trends shaping cyber security tomorrow.</p>
+            <a href="unit12.html" class="button">Learn More</a>
+          </div>
         </div>
-    </footer>
+      </div>
+    </section>
+  </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+  <!-- Footer -->
+  <footer id="footer" class="wrapper style1-alt">
+    <div class="inner">
+      <ul class="menu">
+        <li>&copy; Your Name. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 </html>
