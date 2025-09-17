@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 4: Application of Threat Modelling and Management Techniques</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -18,9 +18,22 @@
             margin-top: 0;
             color: #ff6600;
         }
-        .post-block p {
+        .post-block h3 {
+            color: #fff;
+            margin-top: 15px;
+        }
+        .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
+        }
+        .question {
+            font-weight: bold;
+            color: #ffcc66;
+            margin-top: 15px;
+        }
+        .answer {
+            margin-left: 15px;
+            margin-bottom: 15px;
         }
         .nav-buttons {
             margin-bottom: 20px;
@@ -61,23 +74,55 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 4: Application of Threat Modelling and Management Techniques</h1>
 
-                <!-- Blog-style content blocks -->
+                <!-- Blog-style content block -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
-                </div>
+                    <h2>Unit 4 Seminar</h2>
+                    <h3>Risk Identification and Modelling - Case Study</h3>
+                    <p><a href="https://doi.org/10.1016/j.compind.2022.103611" target="_blank">Case Study Source</a>: Threat modelling for industrial cyber physical systems (ICPS) in the era of smart manufacturing</p>
 
-                <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
-                </div>
+                    <p class="question">1. What are the key elements and interdependencies in a cyber-physical system that must be captured in a comprehensive threat model, and why are they critical for accurate risk analysis?</p>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Physical Assets (Hardware Layer):</strong> Machines, sensors, actuators, controllers, production lines. These are the tangible assets attackers might disrupt, damage, or exploit (Jbair et al., 2022).</li>
+                            <li><strong>Cyber Assets (Digital Layer):</strong> Software applications, PLC systems, control logic, communication protocols. Vulnerable to malware, replay attacks, unauthorized access (Jbair et al., 2022).</li>
+                            <li><strong>Communication Networks (Connectivity Layer):</strong> Wired/wireless links, industrial IoT, fieldbus, OPC-UA, etc. Critical for understanding how threats propagate (Jbair et al., 2022).</li>
+                            <li><strong>Data & Information Flows:</strong> Sensor data, control signals, manufacturing process data, logs. Must capture confidentiality, integrity, and availability risks (Jbair et al., 2022).</li>
+                            <li><strong>Human & Organisational Actors:</strong> Operators, engineers, vendors, supply-chain partners. Human error, insider threats, and policy weaknesses are major attack vectors (NIST, 2023).</li>
+                            <li><strong>Processes & Functional Dependencies:</strong> How assets work together (e.g., if one machine stops, the line halts). Dependencies must be understood for prioritising high-impact risks (ISA/IEC, n.d.).</li>
+                        </ul>
+                        <p><em>Why these are critical:</em> Considering both physical and digital dependencies gives a full picture of possible failures, shows which threats are most serious, and reflects how the system evolves. It helps locate weak spots, plan protections, and adjust over time.</p>
+                    </div>
 
-                <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <p class="question">2. How can threat modelling help identify attack entry points and system vulnerabilities in cyber-physical energy systems, and what are the challenges in doing so effectively?</p>
+                    <div class="answer">
+                        <p><strong>How threat modelling helps:</strong></p>
+                        <ul>
+                            <li>Shows all system parts (sensors, control systems, networks) and where attackers might break in.</li>
+                            <li>Maps possible attack paths (e.g., from a small device into the main control system).</li>
+                            <li>Finds weak points like old software, weak passwords, or unsafe connections.</li>
+                            <li>Helps prioritise risks, so the most dangerous ones are fixed first.</li>
+                        </ul>
+                        <p><strong>Challenges:</strong></p>
+                        <ul>
+                            <li>Very complex systems – energy grids mix IT, physical equipment, and control networks.</li>
+                            <li>Constant evolution – new smart devices and renewable sources expand the attack surface.</li>
+                            <li>Missing information – not all parts or suppliers are visible.</li>
+                            <li>Need for real-time operation – systems cannot stop for security checks.</li>
+                            <li>Human factors – mistakes or insider threats are hard to model.</li>
+                        </ul>
+                    </div>
+
+                    <p class="question">3. In the context of CPS threat modelling, how can scenario-specific metrics and risk assessment methodologies be used to prioritise vulnerabilities and guide the development of targeted security countermeasures?</p>
+                    <div class="answer">
+                        <p>By using metrics such as attack likelihood, downtime costs, or safety impact, organisations can compare which vulnerabilities are most serious. This allows prioritisation of high-risk weaknesses rather than treating all threats equally. Targeted countermeasures can then protect the most critical assets first, making security more effective and resource-efficient.</p>
+                    </div>
+
+                    <h3>Reference list:</h3>
+                    <p>Jbair, M. et al. (2022) 'Threat modelling for industrial cyber physical systems in the era of smart manufacturing', <em>Computers in Industry</em>, 137, p.103611.</p>
+                    <p>NIST (2023) <em>Guide to Operational Technology (OT) Security: NIST Special Publication 800-82 Revision 3</em>, National Institute of Standards and Technology.</p>
+                    <p>ISA/IEC (n.d.) <em>ISA/IEC 62443 series of standards: Foundational cybersecurity for industrial automation and control systems</em>, International Electrotechnical Commission / International Society of Automation.</p>
                 </div>
 
             </div>
