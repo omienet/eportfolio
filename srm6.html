@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 6: The Practical Implications of Security and Risk Standards</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,11 @@
             margin-top: 0;
             color: #ff6600;
         }
-        .post-block p {
+        .post-block h3 {
+            color: #fff;
+            margin-top: 15px;
+        }
+        .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
         }
@@ -61,23 +65,65 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 6: The Practical Implications of Security and Risk Standards</h1>
 
-                <!-- Blog-style content blocks -->
+                <!-- Content Block -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
-                </div>
+                    <h2>Unit 6 Seminar</h2>
+                    <h3>Security Standards</h3>
 
-                <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
-                </div>
+                    <p><strong>1. Which of the standards discussed in the sources above would apply to the organisation discussed in the assessment?</strong></p>
+                    <ul>
+                        <li><strong>UK GDPR / Data Protection Act 2018:</strong> As a UK business, Pampered Pets processes customer personal data (e.g., names, emails, payment details). This makes the business subject to the UK GDPR and the Data Protection Act 2018, which require lawful, fair, and secure handling of personal data (ICO, 2020).</li>
+                        <li><strong>PCI DSS:</strong> The shop accepts credit and debit card payments at the point of sale. Any business that stores, processes, or transmits cardholder data must comply with PCI DSS requirements to ensure secure payment processing (PCI Security Standards Council, 2020).</li>
+                        <li><strong>HIPAA:</strong> Not applicable. HIPAA applies only to U.S. healthcare organisations and their business associates dealing with protected health information (HIPAA Journal, 2020). Pampered Pets is not in this sector.</li>
+                    </ul>
 
-                <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <p><strong>2. Evaluate the company against the appropriate standards and decide how would you check if standards were being met?</strong></p>
+                    <p><em>UK GDPR</em></p>
+                    <ul>
+                        <li>Data handling: Check whether Pampered Pets has a lawful basis for processing customer data (e.g., fulfilling purchases, handling email orders).</li>
+                        <li>Policies and notices: Look for a privacy notice, data retention policy, and staff training records.</li>
+                        <li>Security: Confirm appropriate security on devices (e.g., firewalls, antivirus, password protection, encryption).</li>
+                        <li>Accountability: Ask whether the company has a record of processing activities (RoPA) and breach reporting procedures (ICO, 2020).</li>
+                    </ul>
+                    <p><em>PCI DSS</em></p>
+                    <ul>
+                        <li>Payment process: Check if the payment terminals used in-store are PCI-compliant and if cardholder data is not stored on shop computers.</li>
+                        <li>Network security: Assess wireless setup, firewalls, and whether segmentation keeps payment systems isolated from general office use.</li>
+                        <li>Compliance evidence: Review whether the business completes the correct Self-Assessment Questionnaire (SAQ) and undergoes vulnerability scans as required for merchants (PCI Security Standards Council, 2020).</li>
+                    </ul>
+
+                    <p><strong>3. What would your recommendations be to meet those standards?</strong></p>
+                    <p><em>For GDPR compliance:</em></p>
+                    <ul>
+                        <li>Draft and publish a clear privacy notice for customers.</li>
+                        <li>Maintain records of how customer data (emails, purchase records) is collected, used, and retained.</li>
+                        <li>Train staff in data protection basics.</li>
+                        <li>Implement strong device and network security (password policies, software updates, antivirus, encryption).</li>
+                    </ul>
+                    <p><em>For PCI DSS compliance:</em></p>
+                    <ul>
+                        <li>Ensure all card payment devices are PCI-approved.</li>
+                        <li>Do not store cardholder data on staff computers.</li>
+                        <li>Strengthen the Wi-Fi network (use WPA3 encryption, separate guest and staff networks).</li>
+                        <li>Complete the correct PCI DSS Self-Assessment Questionnaire (SAQ) for a small merchant.</li>
+                        <li>Keep an incident response plan for payment security breaches.</li>
+                    </ul>
+
+                    <p><strong>4. What assumptions have you made?</strong></p>
+                    <ul>
+                        <li>Pampered Pets processes only a small volume of personal data, mainly names, emails, and payment details, not sensitive categories of data.</li>
+                        <li>Card payments are handled through third-party payment providers and terminals, not stored on in-house systems.</li>
+                        <li>The business does not currently operate internationally, but GDPR will continue to apply if customers from the EU/UK are served in the future.</li>
+                        <li>HIPAA does not apply because the company is not in healthcare and does not handle U.S. patient data.</li>
+                    </ul>
+
+                    <h3>Reference List</h3>
+                    <p>Information Commissioner’s Office (ICO). (2020) A guide to the data protection principles: lawfulness, fairness and transparency. Available at: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/lawfulness-fairness-and-transparency/" target="_blank">Link</a> (Accessed: 05 September 2025).</p>
+                    <p>Information Commissioner’s Office (ICO). (2020) Accountability and governance: records of processing and lawful basis. Available at: <a href="https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/accountability-and-governance/accountability-framework/records-of-processing-and-lawful-basis/" target="_blank">Link</a> (Accessed: 05 September 2025).</p>
+                    <p>PCI Security Standards Council. (2020) Merchant resources: Self-Assessment Questionnaires (SAQs). Available at: <a href="https://www.pcisecuritystandards.org/merchants/" target="_blank">Link</a> (Accessed: 05 September 2025).</p>
+                    <p>U.S. Department of Health & Human Services (HHS). (2020) Covered Entities & Business Associates. Available at: <a href="https://www.hhs.gov/hipaa/for-professionals/covered-entities/index.html" target="_blank">Link</a> (Accessed: 05 September 2025).</p>
                 </div>
 
             </div>
