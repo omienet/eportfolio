@@ -35,6 +35,23 @@
             margin-left: 15px;
             margin-bottom: 15px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        table, th, td {
+            border: 1px solid #555;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: #ccc;
+        }
+        th {
+            background-color: #2a2a3d;
+            color: #ff6600;
+        }
         .nav-buttons {
             margin-bottom: 20px;
         }
@@ -76,7 +93,7 @@
 
                 <h1 class="major">Unit 4: Application of Threat Modelling and Management Techniques</h1>
 
-                <!-- Blog-style content block -->
+                <!-- Seminar block -->
                 <div class="post-block">
                     <h2>Unit 4 Seminar</h2>
                     <h3>Risk Identification and Modelling - Case Study</h3>
@@ -123,6 +140,58 @@
                     <p>Jbair, M. et al. (2022) 'Threat modelling for industrial cyber physical systems in the era of smart manufacturing', <em>Computers in Industry</em>, 137, p.103611.</p>
                     <p>NIST (2023) <em>Guide to Operational Technology (OT) Security: NIST Special Publication 800-82 Revision 3</em>, National Institute of Standards and Technology.</p>
                     <p>ISA/IEC (n.d.) <em>ISA/IEC 62443 series of standards: Foundational cybersecurity for industrial automation and control systems</em>, International Electrotechnical Commission / International Society of Automation.</p>
+                </div>
+
+                <!-- New STRIDE & DREAD Analysis block -->
+                <div class="post-block">
+                    <h2>STRIDE & DREAD Threat Analysis – Pampered Pets Shop - Presented during Unit 4 Seminar</h2>
+
+                    <table>
+                        <tr>
+                            <th>STRIDE Threat</th>
+                            <th>Example in ICPS</th>
+                            <th>DREAD Score (1–10 each)</th>
+                            <th>Total Risk Score</th>
+                            <th>Suggested Countermeasure</th>
+                        </tr>
+                        <tr>
+                            <td>S – Spoofing</td>
+                            <td>Attacker fakes sensor ID to send false temperature data to PLC</td>
+                            <td>D=8, R=7, E=6, A=8, D=5</td>
+                            <td>34</td>
+                            <td>Strong authentication, encrypted sensor communication</td>
+                        </tr>
+                        <tr>
+                            <td>T – Tampering</td>
+                            <td>Manipulating commands sent to robotic arm</td>
+                            <td>D=9, R=6, E=7, A=7, D=6</td>
+                            <td>35</td>
+                            <td>Data integrity checks, message signing</td>
+                        </tr>
+                        <tr>
+                            <td>I – Information Disclosure</td>
+                            <td>Intercepting production data via OPC-UA</td>
+                            <td>D=7, R=5, E=6, A=6, D=7</td>
+                            <td>31</td>
+                            <td>Encryption, secure VPN, access controls</td>
+                        </tr>
+                        <tr>
+                            <td>D – Denial of Service</td>
+                            <td>Flooding fieldbus network to stop production</td>
+                            <td>D=8, R=6, E=5, A=8, D=6</td>
+                            <td>33</td>
+                            <td>Network monitoring, redundancy, rate-limiting</td>
+                        </tr>
+                        <tr>
+                            <td>E – Elevation of Privilege</td>
+                            <td>Vendor gains admin access to SCADA system</td>
+                            <td>D=10, R=4, E=6, A=9, D=5</td>
+                            <td>34</td>
+                            <td>Role-based access control, multi-factor authentication</td>
+                        </tr>
+                    </table>
+
+                    <p>The STRIDE–DREAD analysis reveals that all identified threats pose moderate to high levels of risk, with scores ranging between 31 and 35. The highest-rated threat is <strong>Tampering (35)</strong>, where manipulation of robotic arm commands could severely compromise safety and operational continuity. <strong>Spoofing (34)</strong> and <strong>Elevation of Privilege (34)</strong> also represent critical risks, as both can undermine trust in system data and allow unauthorized control. <strong>Denial of Service (33)</strong> ranks slightly lower but still presents significant disruption potential, while <strong>Information Disclosure (31)</strong>, though comparatively less severe, highlights the importance of safeguarding sensitive production data. These findings emphasize the need for robust technical and procedural countermeasures, such as strong authentication, encryption, access control mechanisms, and proactive network monitoring.</p>
                 </div>
 
             </div>
