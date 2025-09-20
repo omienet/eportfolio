@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 8: Implementing Quantitative Risk Models</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,11 @@
             margin-top: 0;
             color: #ff6600;
         }
-        .post-block p {
+        .post-block h3 {
+            color: #fff;
+            margin-top: 15px;
+        }
+        .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
         }
@@ -61,12 +65,84 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 8: Implementing Quantitative Risk Models</h1>
 
                 <!-- Blog-style content blocks -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
+                    <h2>Unit 8 Seminar</h2>
+                    <h3>Quantitative Risk Modelling - Case Study</h3>
+                    <p><a href="https://link.springer.com/article/10.1007/s41870-023-01540-z" target="_blank">Case Study Source</a></p>
+
+                    <p><strong>Summary</strong></p>
+                    <p>
+                        This study tackles the difficulty of quantifying human-cantered attacks by combining attack trees (for occurrence likelihood) and Markov chains (for success likelihood), both grounded in persuasion principles and communication modes. Its findings can directly inform policy, training, and awareness strategies to mitigate social engineering risks.
+                    </p>
+
+                    <p><strong>Questions</strong></p>
+
+                    <p>1. What are the main challenges in modelling and evaluating the outcomes of Social Engineering Threats, and how does this study attempt to address them?</p>
+                    <ul>
+                        <li><strong>Challenges:</strong>
+                            <ul>
+                                <li>Hard to measure human weakness compared to technical flaws.</li>
+                                <li>Past work often mixes social engineering with technical attacks.</li>
+                                <li>Little focus on persuasion tricks and communication methods.</li>
+                                <li>No clear step-by-step model of how attackers operate.</li>
+                            </ul>
+                        </li>
+                        <li><strong>This study’s solution:</strong>
+                            <ul>
+                                <li>Focuses exclusively on SETs rather than blending them with technical threats, ensuring clearer evaluation.</li>
+                                <li>Uses an attack tree to calculate how often attacks happen (AOP).</li>
+                                <li>Uses a Markov model to calculate how likely attacks succeed (ASP).</li>
+                                <li>Distinguishes explicitly between AOP and ASP, offering more comprehensive risk assessment than prior methods.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>2. How do persuasion principles and modalities contribute to the success of SETs, and why is it important to analyse them systematically?</p>
+                    <ul>
+                        <li><strong>Contribution:</strong>
+                            <ul>
+                                <li>SETs commonly use persuasion principles like authority, reciprocity, commitment, liking, scarcity, and conformity.</li>
+                                <li>Modalities (email, voice call, face-to-face) vary in frequency and effectiveness; for example, email is common but often less effective, while face-to-face is rare but highly effective.</li>
+                                <li>Combining principles (e.g., authority + reciprocity) often increases the chance of success.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Why analyse them:</strong>
+                            <ul>
+                                <li>Helps identify which techniques attackers prefer and which are most effective, supporting better training and awareness programs.</li>
+                                <li>Helps design better training to resist them.</li>
+                                <li>Provides data-driven insights into human vulnerabilities, a key factor in SETs.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>3. What role do the Attack Tree Model and Markov Chain Model play in estimating the Attack Occurrence Probability (AOP) and Attack Success Probability (ASP) of SETs?</p>
+                    <ul>
+                        <li><strong>Attack Tree (AOP):</strong>
+                            <ul>
+                                <li>Breaks down attacks into smaller parts (channel + persuasion trick).</li>
+                                <li>Uses a bottom-up algorithm with AND/OR gates to compute the overall Attack Occurrence Probability.</li>
+                                <li>Uses stats to see how often they occur.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Markov Chain (ASP):</strong>
+                            <ul>
+                                <li>Models attacker steps: disconnect → connect → persuade → success.</li>
+                                <li>Calculates the chance of reaching “success.”</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>4. In what ways can the findings of this study support the development of effective policy frameworks for mitigating social engineering threats in information systems?</p>
+                    <ul>
+                        <li>Provides quantitative metrics (AOP & ASP) that policymakers can use to prioritize threats.</li>
+                        <li>Helps design evidence-based awareness and training programs, focusing on the most common and effective persuasion tactics.</li>
+                        <li>Supports risk ranking of SETs, aiding resource allocation for defence.</li>
+                        <li>Enables organisations to develop targeted countermeasures, such as stricter protocols in high-risk modalities (e.g., email phishing) or resilience training against authority-based persuasion.</li>
+                        <li>Builds a more systematic policy instead of random responses.</li>
+                    </ul>
                 </div>
 
                 <div class="post-block">
