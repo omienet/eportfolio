@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 7: Introduction to the Concepts of Quantitative Risk Modelling</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -18,7 +18,11 @@
             margin-top: 0;
             color: #ff6600;
         }
-        .post-block p {
+        .post-block h3 {
+            color: #fff;
+            margin-top: 15px;
+        }
+        .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
         }
@@ -61,23 +65,46 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 7: Introduction to the Concepts of Quantitative Risk Modelling</h1>
 
-                <!-- Blog-style content blocks -->
+                <!-- Blog-style content block -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
-                </div>
+                    <h2>Collaborative Learning Discussion 2</h2>
+                    <h3>Initial Post</h3>
+                    <p>
+                        Spring et al. (2021) point out several problems with the Common Vulnerability Scoring System (CVSS). 
+                        First, CVSS mainly looks at technical severity, without taking into account the different needs of those 
+                        who must deal with vulnerabilities, such as software vendors, system administrators, or coordinators. 
+                        Second, CVSS scores are static; they do not change as new exploits appear or the threat landscape changes. 
+                        Third, the scoring formula itself has not been clearly explained or tested, which reduces trust in the results. 
+                        Research also shows that many high CVSS scores do not match real-world exploitation, and that experts often 
+                        disagree on how to assign scores (Allodi &amp; Massacci, 2012; Allodi et al., 2018). In short, CVSS can give 
+                        a false sense of accuracy while failing to guide practical decisions.
+                    </p>
+                    <p>
+                        I agree with these criticisms because vulnerability management is not only about severity but also about 
+                        timing, context, and resources.
+                    </p>
+                    <p>
+                        As an alternative, Spring et al. (2021) suggest the Stakeholder-Specific Vulnerability Categorisation (SSVC). 
+                        Unlike CVSS, SSVC does not rely on numbers. Instead, it uses decision trees that help different groups 
+                        (suppliers, deployers, and coordinators) decide on actions such as “immediate,” “out-of-cycle,” “scheduled,” 
+                        or “defer.” These trees consider factors like whether a vulnerability is being actively exploited, whether 
+                        it affects critical missions or safety, and how exposed the system is. This makes SSVC more flexible and 
+                        transparent than CVSS, as it matches the unique needs of different organisations.
+                    </p>
+                    <p>
+                        I believe SSVC should replace CVSS because it gives clearer, context-based advice. CVSS tries to be 
+                        one-size-fits-all, but SSVC allows for different priorities and explains decisions in a way that is 
+                        easier to understand. This makes it more useful for real-world vulnerability management.
+                    </p>
 
-                <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
-                </div>
-
-                <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <h3>References</h3>
+                    <ul>
+                        <li>Allodi, L. and Massacci, F., 2012. A preliminary analysis of vulnerability scores for attacks in the wild: The EKITS and SYM datasets. <i>Workshop on Building Analysis Datasets and Gathering Experience Returns for Security</i>. New York: ACM, pp.17–24.</li>
+                        <li>Allodi, L., Cremonini, M., Massacci, F. and Shim, W., 2018. The effect of security education and expertise on security assessments: The case of software vulnerabilities. Paper presented at the <i>Workshop on the Economics of Information Security (WEIS)</i>, Innsbruck, Austria, 18–19 June.</li>
+                        <li>Spring, J.M., Householder, A.D., Hatleback, E., Manion, A., Oliver, M., Sarvapalli, V., Tyzenhaus, L. and Yarbrough, C., 2021. <i>Prioritizing vulnerability response: A stakeholder-specific vulnerability categorization (version 2.0)</i>. Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.</li>
+                    </ul>
                 </div>
 
             </div>
