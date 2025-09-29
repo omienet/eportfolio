@@ -1,4 +1,4 @@
- <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
     <title>Unit 9: Risk, Business Continuity and Disaster Recovery</title>
@@ -14,13 +14,25 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
         }
-        .post-block h2, .post-block h3 {
+        .post-block h2 {
             margin-top: 0;
-            color: #ff6600;
+            color: #ff6600; /* main section headings */
         }
-        .post-block p {
+        .post-block h3 {
+            color: #fff; /* white subheadings */
+        }
+        .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
+        }
+        .references {
+            margin-top: 15px;
+        }
+        .references ul {
+            padding-left: 20px;
+        }
+        .references li {
+            margin-bottom: 12px; /* spacing between references */
         }
         .nav-buttons {
             margin-bottom: 20px;
@@ -85,12 +97,15 @@
                     <p>
                         Overall, my learning has been that CVSS alone is insufficient. While SSVC offers the best decision-focused alternative, practical adoption may require hybrid models that integrate CVSS’s familiarity, EPSS’s predictive value, and SSVC’s contextual decision-making.
                     </p>
+
                     <h3>References</h3>
-                    <p>
-                        Allodi, L. and Massacci, F., 2012. A preliminary analysis of vulnerability scores for attacks in the wild: The EKITS and SYM datasets. Workshop on Building Analysis Datasets and Gathering Experience Returns for Security. New York: ACM, pp.17–24.<br>
-                        Allodi, L., Cremonini, M., Massacci, F. and Shim, W., 2018. The effect of security education and expertise on security assessments: The case of software vulnerabilities. Paper presented at the Workshop on the Economics of Information Security (WEIS), Innsbruck, Austria, 18–19 June.<br>
-                        Spring, J.M., Householder, A.D., Hatleback, E., Manion, A., Oliver, M., Sarvapalli, V., Tyzenhaus, L. and Yarbrough, C., 2021. Prioritizing vulnerability response: A stakeholder-specific vulnerability categorization (version 2.0). Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.
-                    </p>
+                    <div class="references">
+                        <ul>
+                            <li>Allodi, L. and Massacci, F., 2012. A preliminary analysis of vulnerability scores for attacks in the wild: The EKITS and SYM datasets. Workshop on Building Analysis Datasets and Gathering Experience Returns for Security. New York: ACM, pp.17–24.</li>
+                            <li>Allodi, L., Cremonini, M., Massacci, F. and Shim, W., 2018. The effect of security education and expertise on security assessments: The case of software vulnerabilities. Paper presented at the Workshop on the Economics of Information Security (WEIS), Innsbruck, Austria, 18–19 June.</li>
+                            <li>Spring, J.M., Householder, A.D., Hatleback, E., Manion, A., Oliver, M., Sarvapalli, V., Tyzenhaus, L. and Yarbrough, C., 2021. Prioritizing vulnerability response: A stakeholder-specific vulnerability categorization (version 2.0). Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
