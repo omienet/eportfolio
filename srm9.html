@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 9: Risk, Business Continuity and Disaster Recovery</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -14,7 +14,7 @@
             margin-bottom: 25px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.25);
         }
-        .post-block h2 {
+        .post-block h2, .post-block h3 {
             margin-top: 0;
             color: #ff6600;
         }
@@ -61,23 +61,36 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 9: Risk, Business Continuity and Disaster Recovery</h1>
 
                 <!-- Blog-style content blocks -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
-                </div>
-
-                <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
-                </div>
-
-                <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <h2>Collaborative Learning Discussion 2</h2>
+                    <h3>Summary Post</h3>
+                    <p>
+                        Through this discussion, I have explored the limitations of the Common Vulnerability Scoring System (CVSS) and considered whether alternatives such as the Stakeholder-Specific Vulnerability Categorisation (SSVC) or Exploit Prediction Scoring System (EPSS) could provide better solutions.
+                    </p>
+                    <p>
+                        In my initial post, I agreed with Spring et al. (2021) that CVSS is overly focused on technical severity, produces static scores, and lacks transparency. This means it can mislead organisations, as many high CVSS scores do not reflect real-world exploitation (Allodi and Massacci, 2012; Allodi et al., 2018). I argued that SSVC is a stronger framework because it uses decision trees tailored to different stakeholders, providing context-specific, action-based outcomes.
+                    </p>
+                    <p>
+                        In responding to Matthew, I appreciated his suggestion to combine CVSS with EPSS. EPSS predicts whether vulnerabilities will be exploited, which helps address CVSS’s blind spot. I noted that combining the two would help organisations prioritise effectively, such as patching medium CVSS vulnerabilities with high EPSS likelihoods before high CVSS vulnerabilities with low risk of exploitation.
+                    </p>
+                    <p>
+                        In responding to Ameirah, I supported her argument for SSVC as a replacement. I agreed that SSVC avoids the “one-size-fits-all” approach of CVSS and suggested pairing SSVC with live threat intelligence to strengthen incident prevention.
+                    </p>
+                    <p>
+                        Matthew’s feedback on my own post raised an important point: although SSVC seems more effective, CVSS is deeply embedded in security practice through NIST and PCI DSS. He argued that a hybrid approach combining CVSS, SSVC, and EPSS may be more realistic, or that CVSS v4.0 could be combined with EPSS to improve prioritisation.
+                    </p>
+                    <p>
+                        Overall, my learning has been that CVSS alone is insufficient. While SSVC offers the best decision-focused alternative, practical adoption may require hybrid models that integrate CVSS’s familiarity, EPSS’s predictive value, and SSVC’s contextual decision-making.
+                    </p>
+                    <h3>References</h3>
+                    <p>
+                        Allodi, L. and Massacci, F., 2012. A preliminary analysis of vulnerability scores for attacks in the wild: The EKITS and SYM datasets. Workshop on Building Analysis Datasets and Gathering Experience Returns for Security. New York: ACM, pp.17–24.<br>
+                        Allodi, L., Cremonini, M., Massacci, F. and Shim, W., 2018. The effect of security education and expertise on security assessments: The case of software vulnerabilities. Paper presented at the Workshop on the Economics of Information Security (WEIS), Innsbruck, Austria, 18–19 June.<br>
+                        Spring, J.M., Householder, A.D., Hatleback, E., Manion, A., Oliver, M., Sarvapalli, V., Tyzenhaus, L. and Yarbrough, C., 2021. Prioritizing vulnerability response: A stakeholder-specific vulnerability categorization (version 2.0). Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.
+                    </p>
                 </div>
 
             </div>
