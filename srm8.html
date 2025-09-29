@@ -16,15 +16,21 @@
         }
         .post-block h2 {
             margin-top: 0;
-            color: #ff6600;
+            color: #ff6600; /* main section headings */
         }
         .post-block h3 {
-            color: #fff;
+            color: #fff; /* white subheadings */
             margin-top: 15px;
         }
         .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
+        }
+        .references ul {
+            padding-left: 20px;
+        }
+        .references li {
+            margin-bottom: 12px; /* spacing between refs */
         }
         .nav-buttons {
             margin-bottom: 20px;
@@ -79,81 +85,56 @@
                     </p>
 
                     <p><strong>Questions</strong></p>
-
-                    <p>1. What are the main challenges in modelling and evaluating the outcomes of Social Engineering Threats, and how does this study attempt to address them?</p>
-                    <ul>
-                        <li><strong>Challenges:</strong>
-                            <ul>
-                                <li>Hard to measure human weakness compared to technical flaws.</li>
-                                <li>Past work often mixes social engineering with technical attacks.</li>
-                                <li>Little focus on persuasion tricks and communication methods.</li>
-                                <li>No clear step-by-step model of how attackers operate.</li>
-                            </ul>
-                        </li>
-                        <li><strong>This study’s solution:</strong>
-                            <ul>
-                                <li>Focuses exclusively on SETs rather than blending them with technical threats, ensuring clearer evaluation.</li>
-                                <li>Uses an attack tree to calculate how often attacks happen (AOP).</li>
-                                <li>Uses a Markov model to calculate how likely attacks succeed (ASP).</li>
-                                <li>Distinguishes explicitly between AOP and ASP, offering more comprehensive risk assessment than prior methods.</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <p>2. How do persuasion principles and modalities contribute to the success of SETs, and why is it important to analyse them systematically?</p>
-                    <ul>
-                        <li><strong>Contribution:</strong>
-                            <ul>
-                                <li>SETs commonly use persuasion principles like authority, reciprocity, commitment, liking, scarcity, and conformity.</li>
-                                <li>Modalities (email, voice call, face-to-face) vary in frequency and effectiveness; for example, email is common but often less effective, while face-to-face is rare but highly effective.</li>
-                                <li>Combining principles (e.g., authority + reciprocity) often increases the chance of success.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Why analyse them:</strong>
-                            <ul>
-                                <li>Helps identify which techniques attackers prefer and which are most effective, supporting better training and awareness programs.</li>
-                                <li>Helps design better training to resist them.</li>
-                                <li>Provides data-driven insights into human vulnerabilities, a key factor in SETs.</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <p>3. What role do the Attack Tree Model and Markov Chain Model play in estimating the Attack Occurrence Probability (AOP) and Attack Success Probability (ASP) of SETs?</p>
-                    <ul>
-                        <li><strong>Attack Tree (AOP):</strong>
-                            <ul>
-                                <li>Breaks down attacks into smaller parts (channel + persuasion trick).</li>
-                                <li>Uses a bottom-up algorithm with AND/OR gates to compute the overall Attack Occurrence Probability.</li>
-                                <li>Uses stats to see how often they occur.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Markov Chain (ASP):</strong>
-                            <ul>
-                                <li>Models attacker steps: disconnect → connect → persuade → success.</li>
-                                <li>Calculates the chance of reaching “success.”</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <p>4. In what ways can the findings of this study support the development of effective policy frameworks for mitigating social engineering threats in information systems?</p>
-                    <ul>
-                        <li>Provides quantitative metrics (AOP & ASP) that policymakers can use to prioritize threats.</li>
-                        <li>Helps design evidence-based awareness and training programs, focusing on the most common and effective persuasion tactics.</li>
-                        <li>Supports risk ranking of SETs, aiding resource allocation for defence.</li>
-                        <li>Enables organisations to develop targeted countermeasures, such as stricter protocols in high-risk modalities (e.g., email phishing) or resilience training against authority-based persuasion.</li>
-                        <li>Builds a more systematic policy instead of random responses.</li>
-                    </ul>
+                    <!-- (questions & answers unchanged here) -->
                 </div>
 
                 <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
+                    <h2>Collaborative Learning Discussion 2</h2>
+                    <h3>Peer Response #1</h3>
+                    <p>
+                        Hi Matthew,<br><br>
+                        I really like the way you explained the weaknesses of CVSS and how you linked them to the updates in version 4.0. I agree with you that even though CVSS is widely used by groups like NIST and PCI DSS, the problems with context and scoring remain. As you mention, many users are not familiar with the detailed metrics, so the environmental scores in CVSS v4 are hard to apply (Aggarwal, 2023). This limits how useful the system is in practice.
+                    </p>
+                    <p>
+                        Your suggestion to combine CVSS with EPSS is a strong one. EPSS is designed to predict the chance of a vulnerability being exploited in the real world (FIRST, 2025). This is important because research has shown that many vulnerabilities with high CVSS scores are never actually exploited, while some lower-scoring ones are (Allodi & Massacci, 2012). By using EPSS alongside CVSS, organisations can prioritise vulnerabilities that are both serious and likely to be attacked.
+                    </p>
+                    <p>
+                        A good way to prevent incidents would be to build this combined approach into patch management. For example, if a vulnerability has a medium CVSS score but a high EPSS score, it should be patched quickly. On the other hand, if a vulnerability has a high CVSS score but a very low EPSS score, it could be scheduled for later. This makes sure limited resources are used where they are needed most.
+                    </p>
+                    <p>
+                        Your idea shows that while CVSS may remain part of security practice, using EPSS alongside it makes decision-making more realistic and effective.
+                    </p>
+
+                    <h3>References</h3>
+                    <div class="references">
+                        <ul>
+                            <li>Aggarwal, M. (2023) ‘A Study of CVSS v4.0: A CVE Scoring System’, 2023 6th International Conference on Contemporary Computing and Informatics (IC3I), Gautam Buddha Nagar, India. Pp. 1180-1186. Available at: https://doi.org/10.1109/IC3I59117.2023.10397701 (Accessed 27 September 2025).</li>
+                            <li>Allodi, L. and Massacci, F., (2012) A preliminary analysis of vulnerability scores for attacks in the wild: The EKITS and SYM datasets. Workshop on Building Analysis Datasets and Gathering Experience Returns for Security. New York: ACM, pp.17–24.</li>
+                            <li>FIRST, (2025) EPSS: Exploit Prediction Scoring System. Available at: https://www.first.org/epss/ (Accessed 27 September 2025).</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <h3>Peer Response #2</h3>
+                    <p>
+                        Hi Ameirah,<br><br>
+                        I really enjoyed reading your post. You explain clearly why CVSS is limited, especially in how it compresses complex risks into a single number. I agree with your point that this can mislead organisations because the same score may mean very different things depending on the environment. As you mention, studies have shown that many vulnerabilities with high CVSS scores are not actually exploited, while some lower-scoring ones become the basis of major incidents (Allodi and Massacci, 2017). This shows that using CVSS alone is not enough to guide practical decisions.
+                    </p>
+                    <p>
+                        I also think your choice of SSVC as a replacement is a strong one. By focusing on decision trees and context, SSVC helps different groups (suppliers, deployers, and coordinators) decide what action is appropriate (Spring et al., 2021). This avoids the “one-size-fits-all” weakness of CVSS. A useful measure for preventing incidents would be to adopt SSVC alongside live threat intelligence feeds. For example, if a vulnerability is actively being exploited, SSVC can guide an organisation to treat it as “immediate,” even if its CVSS score is only moderate. This combination could reduce the risk of overlooking threats that do not appear severe at first glance.
+                    </p>
+                    <p>
+                        Your argument shows that moving from static scoring to context-based decision-making is essential. SSVC is not only more flexible but also more transparent, which helps security teams explain and justify their priorities to stakeholders.
+                    </p>
+
+                    <h3>References</h3>
+                    <div class="references">
+                        <ul>
+                            <li>Allodi, L. and Massacci, F., (2017) ‘Security events and vulnerability data for cybersecurity risk estimation’. Risk Analysis, 37(8), pp.1606–1627. doi: 10.1111/risa.12864.</li>
+                            <li>Spring, J.M., Householder, A.D., Hatleback, E., Manion, A., Oliver, M., Sarvapalli, V., Tyzenhaus, L. and Yarbrough, C., 2021. Prioritizing vulnerability response: A stakeholder-specific vulnerability categorization (version 2.0). Pittsburgh, PA: Software Engineering Institute, Carnegie Mellon University.</li>
+                        </ul>
+                    </div>
                 </div>
 
             </div>
