@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 11: Future Trends in Security and Risk Management</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -18,9 +18,31 @@
             margin-top: 0;
             color: #ff6600;
         }
-        .post-block p {
+        .post-block p, .post-block li, table {
             color: #ccc;
             line-height: 1.6;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        th, td {
+            border: 1px solid #444;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #2a2a3c;
+            color: #fff;
+        }
+        caption {
+            caption-side: bottom;
+            text-align: left;
+            font-style: italic;
+            color: #ccc;
+            padding-top: 8px;
         }
         .nav-buttons {
             margin-bottom: 20px;
@@ -61,12 +83,37 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 11: Future Trends in Security and Risk Management</h1>
 
                 <!-- Blog-style content blocks -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
+                    <h2>EMV Quantitative Results</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Code</th>
+                                <th>Risk</th>
+                                <th>Category</th>
+                                <th>Probability</th>
+                                <th>Mean Loss</th>
+                                <th>EMV (£)</th>
+                                <th>Source</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Q1</td><td>Automation malfunction</td><td>Quality</td><td>0.15</td><td>40000.0</td><td>6000.0</td><td>Estimate</td></tr>
+                            <tr><td>Q2</td><td>Supplier quality degradation</td><td>Quality</td><td>0.2</td><td>63333.33</td><td>12666.67</td><td>(FA0, 2024)</td></tr>
+                            <tr><td>Q3</td><td>Warehouse contamination</td><td>Quality</td><td>0.1</td><td>66666.67</td><td>6666.67</td><td>Estimate</td></tr>
+                            <tr><td>Q4</td><td>Production data integrity breach</td><td>Quality</td><td>0.08</td><td>50000.0</td><td>4000.0</td><td>(ENISA, 2023)</td></tr>
+                            <tr><td>Q5</td><td>Loss of skilled oversight</td><td>Quality</td><td>0.12</td><td>25000.0</td><td>3000.0</td><td>Estimate</td></tr>
+                            <tr><td>S1</td><td>International logistics disruption</td><td>Supply</td><td>0.25</td><td>80000.0</td><td>20000.0</td><td>(World Bank, 2023)</td></tr>
+                            <tr><td>S2</td><td>Warehouse ransomware</td><td>Supply</td><td>0.18</td><td>103333.33</td><td>18600.0</td><td>(ENISA, 2023)</td></tr>
+                            <tr><td>S3</td><td>Cloud outage</td><td>Supply</td><td>0.05</td><td>160000.0</td><td>8000.0</td><td>Estimate</td></tr>
+                            <tr><td>S4</td><td>Supplier bankruptcy</td><td>Supply</td><td>0.1</td><td>60000.0</td><td>6000.0</td><td>(Gartner, 2024)</td></tr>
+                            <tr><td>S5</td><td>Transportation IoT attack</td><td>Supply</td><td>0.08</td><td>41666.67</td><td>3333.33</td><td>(ENISA, 2023)</td></tr>
+                        </tbody>
+                        <caption>Table 01: Expected Monetary Value (EMV) of key Risks.</caption>
+                    </table>
                 </div>
 
                 <div class="post-block">
