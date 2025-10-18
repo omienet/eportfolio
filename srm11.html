@@ -20,45 +20,26 @@
         }
         .post-block h3 {
             color: #fff;
-            margin-top: 20px;
+            margin-top: 15px;
         }
-        .post-block p, .post-block li, table {
+        .post-block p, .post-block li {
             color: #ccc;
             line-height: 1.6;
         }
-        table {
+        .post-block table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
-            margin-bottom: 10px;
         }
-        th, td {
+        .post-block th, .post-block td {
             border: 1px solid #444;
-            padding: 8px;
+            padding: 8px 10px;
+            color: #ccc;
             text-align: left;
         }
-        th {
-            background-color: #2a2a3c;
-            color: #fff;
-        }
-        caption {
-            caption-side: bottom;
-            text-align: left;
-            font-style: italic;
-            color: #ccc;
-            padding-top: 8px;
-        }
-        img {
-            display: block;
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
-        .figure-caption {
-            font-style: italic;
-            color: #ccc;
-            margin-top: 5px;
+        .post-block th {
+            background: #2a2a3c;
+            color: #ff6600;
         }
         .nav-buttons {
             margin-bottom: 20px;
@@ -93,6 +74,7 @@
     <div id="wrapper">
         <section id="main" class="wrapper">
             <div class="inner">
+
                 <!-- Navigation buttons -->
                 <div class="nav-buttons">
                     <a href="security-risk-management.html">&larr; Back to Module</a>
@@ -104,47 +86,36 @@
                 <!-- Blog-style content blocks -->
                 <div class="post-block">
                     <h2>EMV Quantitative Results</h2>
+
                     <table>
-                        <thead>
-                            <tr>
-                                <th>Code</th>
-                                <th>Risk</th>
-                                <th>Category</th>
-                                <th>Probability</th>
-                                <th>Mean Loss</th>
-                                <th>EMV (£)</th>
-                                <th>Source</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Q1</td><td>Automation malfunction</td><td>Quality</td><td>0.15</td><td>40000.0</td><td>6000.0</td><td>Estimate</td></tr>
-                            <tr><td>Q2</td><td>Supplier quality degradation</td><td>Quality</td><td>0.2</td><td>63333.33</td><td>12666.67</td><td>(FA0, 2024)</td></tr>
-                            <tr><td>Q3</td><td>Warehouse contamination</td><td>Quality</td><td>0.1</td><td>66666.67</td><td>6666.67</td><td>Estimate</td></tr>
-                            <tr><td>Q4</td><td>Production data integrity breach</td><td>Quality</td><td>0.08</td><td>50000.0</td><td>4000.0</td><td>(ENISA, 2023)</td></tr>
-                            <tr><td>Q5</td><td>Loss of skilled oversight</td><td>Quality</td><td>0.12</td><td>25000.0</td><td>3000.0</td><td>Estimate</td></tr>
-                            <tr><td>S1</td><td>International logistics disruption</td><td>Supply</td><td>0.25</td><td>80000.0</td><td>20000.0</td><td>(World Bank, 2023)</td></tr>
-                            <tr><td>S2</td><td>Warehouse ransomware</td><td>Supply</td><td>0.18</td><td>103333.33</td><td>18600.0</td><td>(ENISA, 2023)</td></tr>
-                            <tr><td>S3</td><td>Cloud outage</td><td>Supply</td><td>0.05</td><td>160000.0</td><td>8000.0</td><td>Estimate</td></tr>
-                            <tr><td>S4</td><td>Supplier bankruptcy</td><td>Supply</td><td>0.1</td><td>60000.0</td><td>6000.0</td><td>(Gartner, 2024)</td></tr>
-                            <tr><td>S5</td><td>Transportation IoT attack</td><td>Supply</td><td>0.08</td><td>41666.67</td><td>3333.33</td><td>(ENISA, 2023)</td></tr>
-                        </tbody>
-                        <caption>Table 01: Expected Monetary Value (EMV) of key Risks.</caption>
+                        <tr>
+                            <th>Code</th>
+                            <th>Risk</th>
+                            <th>Category</th>
+                            <th>Probability</th>
+                            <th>Mean Loss</th>
+                            <th>EMV (£)</th>
+                            <th>Source</th>
+                        </tr>
+                        <tr><td>Q1</td><td>Automation malfunction</td><td>Quality</td><td>0.15</td><td>40000.0</td><td>6000.0</td><td>Estimate</td></tr>
+                        <tr><td>Q2</td><td>Supplier quality degradation</td><td>Quality</td><td>0.2</td><td>63333.33</td><td>12666.67</td><td>(FA0, 2024)</td></tr>
+                        <tr><td>Q3</td><td>Warehouse contamination</td><td>Quality</td><td>0.1</td><td>66666.67</td><td>6666.67</td><td>Estimate</td></tr>
+                        <tr><td>Q4</td><td>Production data integrity breach</td><td>Quality</td><td>0.08</td><td>50000.0</td><td>4000.0</td><td>(ENISA, 2023)</td></tr>
+                        <tr><td>Q5</td><td>Loss of skilled oversight</td><td>Quality</td><td>0.12</td><td>25000.0</td><td>3000.0</td><td>Estimate</td></tr>
+                        <tr><td>S1</td><td>International logistics disruption</td><td>Supply</td><td>0.25</td><td>80000.0</td><td>20000.0</td><td>(World Bank, 2023)</td></tr>
+                        <tr><td>S2</td><td>Warehouse ransomware</td><td>Supply</td><td>0.18</td><td>103333.33</td><td>18600.0</td><td>(ENISA, 2023)</td></tr>
+                        <tr><td>S3</td><td>Cloud outage</td><td>Supply</td><td>0.05</td><td>160000.0</td><td>8000.0</td><td>Estimate</td></tr>
+                        <tr><td>S4</td><td>Supplier bankruptcy</td><td>Supply</td><td>0.1</td><td>60000.0</td><td>6000.0</td><td>(Gartner, 2024)</td></tr>
+                        <tr><td>S5</td><td>Transportation IoT attack</td><td>Supply</td><td>0.08</td><td>41666.67</td><td>3333.33</td><td>(ENISA, 2023)</td></tr>
                     </table>
 
+                    <p style="color:#ccc; margin-top:10px;"><strong>Table 01:</strong> Expected Monetary Value (EMV) of key Risks.</p>
+
                     <h3>Expected Annual Loss (EMV) by Risk</h3>
-                    <img src="assets/images/Picture1.png" alt="Expected Annual Loss (EMV) by Risk">
-                    <p class="figure-caption">Figure 01: Expected Annual Loss (EMV) by Risk.</p>
-                </div>
-
-                <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
-                </div>
-
-                <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <img src="images/Picture1.png" alt="Expected Annual Loss (EMV) by Risk" style="max-width:80%; border-radius:10px;">
+                        <p style="font-style: italic; color:#ccc; margin-top:8px;">Figure 01: Expected Annual Loss (EMV) by Risk</p>
+                    </div>
                 </div>
 
             </div>
