@@ -41,6 +41,18 @@
             background: #2a2a3c;
             color: #ff6600;
         }
+        pre {
+            background: #2a2a3c;
+            color: #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        code {
+            color: #80ff80;
+        }
         .nav-buttons {
             margin-bottom: 20px;
         }
@@ -83,7 +95,7 @@
 
                 <h1 class="major">Unit 11: Future Trends in Security and Risk Management</h1>
 
-                <!-- Blog-style content blocks -->
+                <!-- EMV Quantitative Results -->
                 <div class="post-block">
                     <h2>EMV Quantitative Results</h2>
 
@@ -116,6 +128,85 @@
                         <img src="images/Picture1.png" alt="Expected Annual Loss (EMV) by Risk" style="max-width:80%; border-radius:10px;">
                         <p style="font-style: italic; color:#ccc; margin-top:8px;">Figure 01: Expected Annual Loss (EMV) by Risk</p>
                     </div>
+                </div>
+
+                <!-- Monte Carlo Simulation Results -->
+                <div class="post-block">
+                    <h2>Monte Carlo Simulation Results</h2>
+                    <table>
+                        <tr>
+                            <th>Category</th>
+                            <th>Mean (£)</th>
+                            <th>Median (£)</th>
+                            <th>Std. Dev (£)</th>
+                            <th>5th Percentile (£)</th>
+                            <th>95th Percentile (£)</th>
+                            <th>Prob (>0)</th>
+                            <th>Prob (>£50k)</th>
+                            <th>Prob (>£100k)</th>
+                        </tr>
+                        <tr><td>Total</td><td>88,219</td><td>75,263</td><td>79,059</td><td>0</td><td>236,168</td><td>0.76</td><td>0.64</td><td>0.38</td></tr>
+                        <tr><td>Quality</td><td>32,088</td><td>13,406</td><td>39,497</td><td>0</td><td>109,895</td><td>0.50</td><td>0.32</td><td>0.07</td></tr>
+                        <tr><td>Supply</td><td>56,132</td><td>38,074</td><td>68,194</td><td>0</td><td>191,773</td><td>0.52</td><td>0.47</td><td>0.23</td></tr>
+                    </table>
+
+                    <p style="color:#ccc; margin-top:10px;"><strong>Table 02:</strong> Summary of Monte Carlo simulation results (50,000 iterations).</p>
+
+                    <div style="text-align: center; margin-top: 10px;">
+                        <img src="images/Picture2.png" alt="Monte Carlo Simulation Results" style="max-width:80%; border-radius:10px;">
+                        <p style="font-style: italic; color:#ccc; margin-top:8px;">Figure 02: Output of Python Monte Carlo Simulation (50,000 iterations)</p>
+                    </div>
+                </div>
+
+                <!-- Monte Carlo Simulation Python Script -->
+                <div class="post-block">
+                    <h2>Monte Carlo Simulation Python Script</h2>
+                    <pre><code>import numpy as np
+import pandas as pd
+
+# Define the 10 risks
+risks = [
+    {"code": "Q1", "prob": 0.15, "mean": 40000, "std": 10000},
+    {"code": "Q2", "prob": 0.20, "mean": 63333, "std": 15000},
+    {"code": "Q3", "prob": 0.10, "mean": 66667, "std": 20000},
+    {"code": "Q4", "prob": 0.08, "mean": 50000, "std": 10000},
+    {"code": "Q5", "prob": 0.12, "mean": 25000, "std": 5000},
+    {"code": "S1", "prob": 0.25, "mean": 80000, "std": 25000},
+    {"code": "S2", "prob": 0.18, "mean": 103333, "std": 30000},
+    {"code": "S3", "prob": 0.05, "mean": 160000, "std": 40000},
+    {"code": "S4", "prob": 0.10, "mean": 60000, "std": 15000},
+    {"code": "S5", "prob": 0.08, "mean": 41667, "std": 10000},
+]
+
+# Simulation setup
+n_iterations = 50000
+results = []
+
+# Run the Monte Carlo simulation
+for _ in range(n_iterations):
+    total_loss = 0
+    for risk in risks:
+        if np.random.rand() < risk["prob"]:
+            loss = max(0, np.random.normal(risk["mean"], risk["std"]))
+            total_loss += loss
+    results.append(total_loss)
+
+# Convert to DataFrame
+df = pd.DataFrame({"Total Loss": results})
+
+# Summary statistics
+summary = {
+    "Mean": df["Total Loss"].mean(),
+    "Median": df["Total Loss"].median(),
+    "StdDev": df["Total Loss"].std(),
+    "5th Percentile": df["Total Loss"].quantile(0.05),
+    "95th Percentile": df["Total Loss"].quantile(0.95),
+    "Prob > 0": (df["Total Loss"] > 0).mean(),
+    "Prob > 50k": (df["Total Loss"] > 50000).mean(),
+    "Prob > 100k": (df["Total Loss"] > 100000).mean(),
+}
+
+print(pd.Series(summary))</code></pre>
                 </div>
 
             </div>
