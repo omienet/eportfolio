@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Unit 1: Security and Risk Management</title>
+    <title>Unit 5: Introduction to Security and Risk Standards in Industry and the Enterprise</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -21,6 +21,10 @@
         .post-block p {
             color: #ccc;
             line-height: 1.6;
+        }
+        .post-block h3 {
+            color: #fff;
+            margin-top: 20px;
         }
         .nav-buttons {
             margin-bottom: 20px;
@@ -61,23 +65,35 @@
                     <a href="index.html">🏠 Home</a>
                 </div>
 
-                <h1 class="major">Unit 1: Security and Risk Management</h1>
+                <h1 class="major">Unit 5: Introduction to Security and Risk Standards in Industry and the Enterprise</h1>
 
-                <!-- Blog-style content blocks -->
+                <!-- Case Study Content -->
                 <div class="post-block">
-                    <h2>Reflection on Week 1</h2>
-                    <p>This is where you can write your reflection on what you learned during the first unit. Add insights, thoughts, and how you found the readings and discussions.</p>
-                </div>
+                    <h2>Case Study: Data Breach at Retail and Online Service Provider (July 2016)</h2>
 
-                <div class="post-block">
-                    <h2>Artefact: Risk Management Diagram</h2>
-                    <p>Insert an artefact here, such as an image, diagram, or uploaded resource.</p>
-                    <img src="assets/images/example-diagram.png" alt="Risk Management Diagram" style="max-width:100%; border-radius:8px; margin-top:10px;">
-                </div>
+                    <h3>1. What part of GDPR this case is about</h3>
+                    <p>This case happened before the GDPR came into effect, but it still relates to the same ideas found in the law today. The main issue was the organisation’s failure to protect personal data properly. This links to Article 5(1)(f) of the GDPR, which says that personal data must be kept secure and safe from unauthorised access. It also connects to Article 32, which requires organisations to use suitable technical and organisational steps to keep data safe (European Union, 2016).</p>
+                    <p>The Data Protection Commission (DPC) found that the company had broken Section 2(1)(d) of the Data Protection Acts 1988 and 2003 because it did not take proper security measures to protect its users’ data. The company had weak password rules, no strong way to check changes to user accounts, and no proper management of old or unused accounts (Data Protection Commission, 2020).</p>
 
-                <div class="post-block">
-                    <h2>Discussion Post</h2>
-                    <p>You could copy in your forum post, response, or any notes from the online discussion here.</p>
+                    <h3>2. How the case was resolved</h3>
+                    <p>The organisation reported that it had suffered a brute force attack. Over two weeks, attackers tried many username and password combinations until they found some that worked. Once they got into the accounts, they were able to add new payment methods, withdraw user balances and see personal data (Data Protection Commission, 2020).</p>
+                    <p>The DPC found three main problems. First, passwords and login systems were not strong enough. Second, the company did not properly check when someone changed details on an account. Third, it did not delete or secure old inactive accounts.</p>
+                    <p>The DPC gave the company recommendations to fix these issues and warned that it could face enforcement action if it did not improve. The company responded by introducing multi factor authentication for users and by setting up a data retention policy to manage inactive accounts. Once these steps were taken, the DPC was satisfied, and the case was closed (Data Protection Commission, 2020).</p>
+
+                    <h3>3. What I would do as an Information Security Manager</h3>
+                    <p>If this happened in my organisation, I would focus on preventing such attacks and improving how data is protected.</p>
+                    <p>First, I would make sure all accounts use multi factor authentication. I would also require strong passwords and limit the number of times someone can try to log in before being locked out.</p>
+                    <p>Next, I would set up a monitoring system to alert the team if suspicious login activity happens, such as many failed attempts or access from unusual locations.</p>
+                    <p>I would also create a clear data retention plan. Old or inactive accounts should be deleted or archived after a certain period to reduce risk.</p>
+                    <p>My team and I would have a data breach response plan that explains what to do if a security incident happens. This includes who to contact, how to investigate, and how to notify the DPC and the people affected if required under Articles 33 and 34 of the GDPR (European Union, 2016).</p>
+                    <p>Finally, I would train all staff regularly about data protection, password safety, and phishing. Everyone in the organisation should understand how their actions can affect data security.</p>
+
+                    <h3>4. Key learning point</h3>
+                    <p>This case shows that even simple security weaknesses can lead to major data breaches. Strong passwords, multi factor authentication, good monitoring, and clear data retention rules can help prevent such incidents. It is important to stay alert, update systems often, and make security part of everyday work.</p>
+
+                    <h3>References</h3>
+                    <p>Data Protection Commission (2020) Case Studies: 3) Data Breach at Retail and Online Service Provider. Available at: <a href="https://www.dataprotection.ie/en/pre-gdpr/case-studies" target="_blank">https://www.dataprotection.ie/en/pre-gdpr/case-studies</a> (Accessed: 19 October 2025).</p>
+                    <p>European Union (2016) Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation). Official Journal of the European Union, L119, pp. 1–88. Available at: <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank">https://eur-lex.europa.eu/eli/reg/2016/679/oj</a> (Accessed: 19 October 2025).</p>
                 </div>
 
             </div>
